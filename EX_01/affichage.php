@@ -18,6 +18,7 @@ function afficher_description ($couleur, $prix)
 }
 ?>
 <?php
+
 function afficher_produit($nom_produit, $couleur, $prix, $disponible){
 if($disponible == true)
 {
