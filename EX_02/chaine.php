@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+</head>
 <?php 
 $str1 = "La maitrise des fondamentaux du code et de la programmation dans les domaines du business, du marketing et de la communication est un avantage serieux et utile." ;
 $str1encaractere = strlen($str1);
@@ -8,8 +11,11 @@ $mb_strtolower = mb_strtolower($str1);
 $strtoupper = strtoupper($str1);
 $str_shuffle = str_shuffle($str1);
 $str2 = "est un avantage sérieux et utile.";
-$str1caractere2 = str1en($str2);
-$substr = substr($str1, 0- $str1caractere2);
+$strlencaractere2 = strlen($str2);
+$substr = substr($str1, 0, - $strlencaractere2);
+$mot = "la";
+$replace = "LA" ;
+$str_replace = str_replace($mot, $replace,$str1);
 ?>
 <body>
 <p>
@@ -36,7 +42,7 @@ echo $strtoupper;
 echo $str_shuffle;
 ?>
 <?php 
-echo "La chaine <B>str2</B> contient $str1caractere2 caracteres";
+echo "La chaine <B>str2</B> contient $strlencaractere2 caracteres";
 ?>
 </p>
 <p>
@@ -44,4 +50,9 @@ echo "La chaine <B>str2</B> contient $str1caractere2 caracteres";
 echo $substr;
 ?>
 </p>
+<p>
+<?php
+echo $str_replace
+?>
 </body>
+</html>
